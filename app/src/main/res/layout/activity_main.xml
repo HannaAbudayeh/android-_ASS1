@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#222831"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="#00ADB5"
+        android:text="TO DO List"
+        android:textAlignment="center"
+        android:textColor="#EEEEEE"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022" />
+
+    <EditText
+        android:id="@+id/editTextText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="NEW TO DO:"
+        android:inputType="text"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="#393E46"
+        android:minWidth="270dp"
+        android:text="Choose Priority:"
+        android:textAlignment="center"
+        android:textColor="#EEEEEE"
+        android:textSize="24sp" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+
+        <RadioButton
+            android:id="@+id/highR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="High"
+            android:textColor="#EEEEEE" />
+
+        <RadioButton
+            android:id="@+id/mediumR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Medium"
+            android:textColor="#EEEEEE" />
+
+        <RadioButton
+            android:id="@+id/lowR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Low"
+            android:textColor="#EEEEEE" />
+    </RadioGroup>
+
+
+    <TextView
+        android:id="@+id/hannaa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:minWidth="270dp"
+        android:textAlignment="center"
+        android:textColor="#E60404"
+        android:textSize="22sp" />
+
+    <Button
+        android:id="@+id/addbt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="1dp"
+        android:backgroundTint="#393E46"
+        android:minWidth="150dp"
+        android:minHeight="60dp"
+        android:text="ADD"
+        android:textAllCaps="false"
+        android:textColorHighlight="#B81D1D"
+        android:textColorLink="#D51A1A"
+        android:textStyle="bold" />
+
+    <ListView
+        android:id="@+id/llist"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:background="#00ADB5"
+        android:backgroundTint="#00ADB5"
+        android:cacheColorHint="#FFFFFF" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>
