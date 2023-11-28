@@ -16,7 +16,6 @@ public class MainActivity2 extends AppCompatActivity {
     private String taskName;
     private String taskPriority;
     private String taskSta;
-
     //    Switch s_switch;
     Button back;
     Button togglebtn;
@@ -59,8 +58,6 @@ public class MainActivity2 extends AppCompatActivity {
 
         }
 
-
-
         togglebtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -85,10 +82,8 @@ public class MainActivity2 extends AppCompatActivity {
                 resultIntent.putExtra("selectedTask", taskName);
 
                 startActivity(resultIntent);
-
             }
         });
-
         back =findViewById(R.id.back);
         back.setOnClickListener(new View.OnClickListener(){
             @Override

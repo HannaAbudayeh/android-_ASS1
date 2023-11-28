@@ -25,7 +25,6 @@ import java.util.List;
 import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
-
     private static SharedPreferences prefs;
     private static SharedPreferences.Editor editor;
     Button addbtt;
@@ -42,7 +41,6 @@ public class MainActivity extends AppCompatActivity {
     String delTaskName;
     TextView errorTextView;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,7 +51,6 @@ public class MainActivity extends AppCompatActivity {
         arrayAdapter = new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_list_item_1, Task);
         Lview.setAdapter(arrayAdapter);
 //        clearSharedPreferences();
-
 
         taskdel = getIntent().getStringExtra("deleteTask");
         delTaskName = getIntent().getStringExtra("selectedTask");
@@ -111,22 +108,13 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra("task_Status", selectedSta);
                 intent.putExtra("position", position);
 
-
                 Log.d("logid",selectedPriority);
-                logSharedPreferences();
-
                 startActivity(intent);
             }
         });
 
     }
-    private void logSharedPreferences() {
-        Map<String, ?> allPrefs = prefs.getAll();
 
-        for (Map.Entry<String, ?> entry : allPrefs.entrySet()) {
-            Log.d("SharedPreferences", entry.getKey() + ": " + entry.getValue().toString());
-        }
-    }
     private void clearSharedPreferences() {
         editor.clear();
         editor.apply();
@@ -181,7 +169,6 @@ public class MainActivity extends AppCompatActivity {
 //        high = findViewById(R.id.highR);
 //        medium = findViewById(R.id.mediumR);
         Lview = findViewById(R.id.llist);
-
     }
     public static void toggleTaskStatus(String taskName, String updStatus) {
         for (int i = 0; i < Task.size(); i++) {

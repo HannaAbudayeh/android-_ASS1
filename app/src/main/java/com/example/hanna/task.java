@@ -9,7 +9,6 @@ public class task {
         this.Name=name;
         this.Priority=Priority;
         this.status="unfinished";
-
     }
     public String getName() {
         return Name;
